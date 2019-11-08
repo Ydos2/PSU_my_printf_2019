@@ -15,15 +15,14 @@ void redirect_all_std(void)
     cr_redirect_stderr();
 }
 
-Test(sum_stdarg, return_correct_when_i_is_zero)
-{
-    int ret = sum_stdarg(0, 3, 21, 25, -4);
-
-    cr_assert_eq(ret, 42);
-}
-
 Test(my_printf, simple_string, .init = redirect_all_std)
 {
     my_printf("hello world");
     cr_assert_stdout_eq_str("hello world");
+}
+
+Test(my_printf, twitter, .init = redirect_all_std)
+{
+    my_printf("Address of a: %#X\n", 18295);
+    cr_assert_stdout_eq_str("Address of a: 0X4777");
 }
