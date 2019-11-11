@@ -39,7 +39,7 @@ int redirect2(char arg_str, va_list display, int count, int b)
         octal(display);
         break;
     case 'p':
-        adresse(display, arg_str);
+        adresse(display);
         break;
     case 'x':
         hexamin(display);

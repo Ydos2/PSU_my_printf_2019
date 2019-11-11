@@ -12,7 +12,7 @@ DIRTEST		=./tests/*.c
 COMPIL		= gcc *.c -L $(DIRLIB) -lmy -o $(EXEC)
 COMPIL_TEST		= gcc *.c -g3 -L $(DIRLIB) $(DIRTEST) --coverage -lcriterion -lmy -o $(EXEC_TEST)
 EXEC		= a.out
-EXEC_TEST		= tests_a.out
+EXEC_TEST		= unit_tests
 RUN_TESTS	=	./$(EXEC_TEST)
 
 COVERAGE	=	gcovr --exclude tests/
