@@ -9,20 +9,24 @@
 
 int string_lm(va_list display)
 {
-    va_arg(display, unsigned char *);
+    unsigned char i = va_arg(display, int);
+    return (i);
 }
 
 int decimal_lm(va_list display)
 {
-    int i = va_arg(display, unsigned int);
+    unsigned short int i = va_arg(display, int);
+    return (i);
 }
 
 int carac_lm(va_list display)
 {
-    my_putchar(va_arg(display, long int));
+    unsigned long int i = va_arg(display, int);
+    return (i);
 }
 
 int binary_lm(va_list display)
 {
-    my_put_nbr_base(va_arg(display, int), "01");
+    unsigned long long int i = va_arg(display, int);
+    return (i);
 }

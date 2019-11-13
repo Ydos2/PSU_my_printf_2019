@@ -24,3 +24,8 @@ int printerr(va_list display)
     write(1, "0X", 3);
     my_put_nbr_base(va_arg(display, int), "0123456789ABCDEF");
 }
+
+int decimalV2(int i)
+{
+    my_put_nbr(i);
+}

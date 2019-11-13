@@ -21,7 +21,7 @@ int my_printf(char *str, ...)
         if (c == 1 && b != 37) {
             c = check_flag(str, z, j, g), g = 0, d = 1;
         } if (c == 2)
-            z++, c = check_flag(str, z, j, g), g = 0, d = 1;
+            z++, c = 0;
         if (a == 37)
             c = 1, d = 1;
         for (int w = 0; w == 0 && b == 37; g += 1, w++);
@@ -35,9 +35,7 @@ int my_printf(char *str, ...)
 int check_flag(char *str, int z, va_list j, int g)
 {
     char flag[15] = "sidcbopxXs%muhl";
-    int it = 0;
-    int re = 0;
-
+    int it = 0, re = 0, a = 0;
     int (*flag_print[15])() = {string, decimal, decimal, carac, binary,
     octal, adresse, hexamin, hexamaj, printer, percent,
     stre, decinosi, decimal_lm, carac_lm};
@@ -50,8 +48,23 @@ int check_flag(char *str, int z, va_list j, int g)
             break;
         }
     }
-    if (it == 13 || it == 14)
-        return (2);
+    a = check_flag2(it, z, str, re);
+    return (a);
+}
+
+int check_flag2(int it, int z, char *str, int re)
+{
+    char flag[15] = "sidcbopxXs%muhl";
+    int (*flag_print[15])() = {string, decimal, decimalV2, carac, binary,
+    octalV2, adresse, hexaminV2, hexamajV2, printer, percent,
+    stre, decinosiV2, decimal_lm, carac_lm};
+   
+    for (int ti = 0; it == 13 || it == 14 || flag[ti] != '\0'; ti++) {
+        if (flag[ti] == str[z+1]) {
+            flag_print[ti](re);
+            return (2);
+        }
+    }
     return (0);
 }
 
@@ -67,31 +80,4 @@ int hcf(char *str, int z, va_list j)
     }
     return (0);
 }
-/*
-int double_flag_check(char *str, int z, int a, int b)
-{
-    char flag[2] = "hl";
-
-    void (*flag_print[2])() = {string_lm, binary_lm};
-
-    for (int it = 0; flag[it] != '\0'; it++) {
-        if (flag[it] == str[z])
-            flag_print[it](j);
-    }
-    return (0);
-}*/
-
-int double_flag(char *str, int z, va_list j)
-{
-    char flag[2] = "hl";
-
-    int (*flag_print[2])() = {string_lm, binary_lm};
-
-    for (int it = 0; flag[it] != '\0'; it++) {
-        if (flag[it] == str[z])
-            flag_print[it](j);
-    }
-    return (0);
-}
-
 //hh, h, l, ll, q, L, j, z, Z, t

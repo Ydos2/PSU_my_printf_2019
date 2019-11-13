@@ -62,6 +62,7 @@ int my_put_nbr_base(int nbr, char *base);
 int my_printf(char *p, ...);
 int check_flag(char *str, int z, va_list j, int g);
 int hcf(char *str, int z, va_list j);
+int check_flag2(int it, int z, char *str, int re);
 
 int redirect1(int arg, va_list display, int count, int b);
 int redirect2(char arg_str, va_list display, int count, int b);
@@ -93,4 +94,10 @@ int string_lm(va_list display);
 int decimal_lm(va_list display);
 int carac_lm(va_list display);
 int binary_lm(va_list display);
+int decimalV2(int i);
+
+int octalV2(int i);
+int hexaminV2(int i);
+int hexamajV2(int i);
+int decinosiV2(int i);
 #endif /* !MY_H_ */
