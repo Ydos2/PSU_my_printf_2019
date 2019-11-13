@@ -68,24 +68,29 @@ int redirect2(char arg_str, va_list display, int count, int b);
 int redirect3(char arg_str, va_list display, int count, int b);
 int ash(int arg_str, va_list display, int count, int b);
 
-void string(va_list display);
-void decimal(va_list display);
-void carac(va_list display);
-void binary(va_list display);
-void my_puttstr(char const *str);
+int string(va_list display);
+int decimal(va_list display);
+int carac(va_list display);
+int binary(va_list display);
+int my_puttstr(char const *str);
 
-void octal(va_list display);
-void adresse(va_list display);
-void hexamin(va_list display);
-void hexamaj(va_list display);
-void countt(va_list display, int count_n);
+int octal(va_list display);
+int adresse(va_list display);
+int hexamin(va_list display);
+int hexamaj(va_list display);
+int countt(va_list display, int count_n);
 
-void printer(va_list display);
-void percent(va_list display, int b);
-void stre(va_list display);
-void decinosi(va_list display);
+int printer(va_list display);
+int percent(va_list display, int b);
+int stre(va_list display);
+int decinosi(va_list display);
 
-void add0chiffre(va_list display);
-void xx(va_list display);
-void printerr(va_list display);
+int add0chiffre(va_list display);
+int xx(va_list display);
+int printerr(va_list display);
+
+int string_lm(va_list display);
+int decimal_lm(va_list display);
+int carac_lm(va_list display);
+int binary_lm(va_list display);
 #endif /* !MY_H_ */
