@@ -58,7 +58,7 @@ int check_flag2(int it, int z, char *str, int re)
     int (*flag_print[15])() = {string, decimal, decimalV2, carac, binary,
     octalV2, adresse, hexaminV2, hexamajV2, printer, percent,
     stre, decinosiV2, decimal_lm, carac_lm};
-   
+
     for (int ti = 0; it == 13 || it == 14 || flag[ti] != '\0'; ti++) {
         if (flag[ti] == str[z+1]) {
             flag_print[ti](re);
@@ -80,4 +80,4 @@ int hcf(char *str, int z, va_list j)
     }
     return (0);
 }
-//hh, h, l, ll, q, L, j, z, Z, t
+//hh, h, l, ll, q, L, j, z, Z, t, p
