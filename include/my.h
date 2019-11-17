@@ -69,35 +69,35 @@ int redirect2(char arg_str, va_list display, int count, int b);
 int redirect3(char arg_str, va_list display, int count, int b);
 int ash(int arg_str, va_list display, int count, int b);
 
-int string(va_list display);
-int decimal(va_list display);
-int carac(va_list display);
-int binary(va_list display);
-int my_puttstr(char const *str);
+int my_puts_string(va_list display);
+int my_puts_decimal(va_list display);
+int my_puts_carac(va_list display);
+int my_puts_binary(va_list display);
+int my_puts_my_puttstr(char const *str);
 
-int octal(va_list display);
-int adresse(va_list display);
-int hexamin(va_list display);
-int hexamaj(va_list display);
-int countt(va_list display, int count_n);
+int my_puts_octal(va_list display);
+int my_puts_adresse(va_list display);
+int my_puts_hexamin(va_list display);
+int my_puts_hexamaj(va_list display);
+int my_puts_countt(va_list display, int count_n);
 
-int printer(va_list display);
-int percent(va_list display, int b);
-int stre(va_list display);
-int decinosi(va_list display);
+int my_puts_printer(va_list display);
+int my_puts_percent(va_list display, int b);
+int my_puts_stre(va_list display);
+int my_puts_decinosi(va_list display);
 
-int add0chiffre(va_list display);
-int xx(va_list display);
-int printerr(va_list display);
+int my_puts_add0chiffre(va_list display);
+int my_puts_xx(va_list display);
+int my_puts_printerr(va_list display);
 
-int string_lm(va_list display);
-int decimal_lm(va_list display);
-int carac_lm(va_list display);
-int binary_lm(va_list display);
-int decimalV2(int i);
+int my_puts_string_lm(va_list display);
+int my_puts_decimal_lm(va_list display);
+int my_puts_carac_lm(va_list display);
+int my_puts_binary_lm(va_list display);
+int my_puts_decimalV2(int i);
 
-int octalV2(int i);
-int hexaminV2(int i);
-int hexamajV2(int i);
-int decinosiV2(int i);
+int my_puts_octalV2(int i);
+int my_puts_hexaminV2(int i);
+int my_puts_hexamajV2(int i);
+int my_puts_decinosiV2(int i);
 #endif /* !MY_H_ */

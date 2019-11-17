@@ -7,7 +7,7 @@
 
 #include "./../../include/my.h"
 
-int my_puttstr(char const *str)
+int my_puts_my_puttstr(char const *str)
 {
     char i = 0;
 
@@ -17,7 +17,7 @@ int my_puttstr(char const *str)
     }
 }
 
-int printer(va_list display)
+int my_puts_printer(va_list display)
 {
     char const *str = va_arg(display, char *);
     char i = 0;
@@ -34,13 +34,13 @@ int printer(va_list display)
     }
 }
 
-int percent(va_list display, int b)
+int my_puts_percent(va_list display, int b)
 {
     my_put_nbr(b);
     write(1, " ", 1);
 }
 
-int stre(va_list display)
+int my_puts_stre(va_list display)
 {
     strerror(errno);
     if (errno != -1)
@@ -49,7 +49,7 @@ int stre(va_list display)
         write(1, "No such file or directory", 25);
 }
 
-int decinosi(va_list display)
+int my_puts_decinosi(va_list display)
 {
     long int a = va_arg(display, unsigned int);
     long int b = 4294967296;

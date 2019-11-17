@@ -6,7 +6,7 @@
 ##
 
 NAMELIB		= libmy.a
-DIRLIB		=./lib/
+DIRLIB		=./
 DIRLIBMY		=./lib/my/
 DIRTEST		=./tests/*.c
 COMPIL		= gcc *.c -L $(DIRLIB) -lmy -o $(EXEC)
@@ -18,7 +18,7 @@ RUN_TESTS	=	./$(EXEC_TEST)
 COVERAGE	=	gcovr --exclude tests/
 COVERAGE_BRANCH		=	gcovr --exclude tests/ -b
 
-all	: make compilation clean
+all	: make clean
 
 make:
 		cd $(DIRLIBMY) && make

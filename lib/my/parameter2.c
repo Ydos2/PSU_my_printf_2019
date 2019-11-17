@@ -7,7 +7,7 @@
 
 #include "./../../include/my.h"
 
-int octal(va_list display)
+int my_puts_octal(va_list display)
 {
     int i = va_arg(display, int);
     int j = 4294967295;
@@ -19,7 +19,7 @@ int octal(va_list display)
         my_put_nbr_base(i, "01234567");
 }
 
-int adresse(va_list display)
+int my_puts_adresse(va_list display)
 {
     int i = 0;
     int nbr = va_arg(display, int);
@@ -28,12 +28,12 @@ int adresse(va_list display)
     i += my_put_nbr_base(nbr, "0123456789abcdef");
 }
 
-int hexamin(va_list display)
+int my_puts_hexamin(va_list display)
 {
     my_put_nbr_base(va_arg(display, int), "0123456789abcdef");
 }
 
-int hexamaj(va_list display)
+int my_puts_hexamaj(va_list display)
 {
     my_put_nbr_base(va_arg(display, int), "0123456789ABCDEF");
 }

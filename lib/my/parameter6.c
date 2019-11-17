@@ -7,22 +7,22 @@
 
 #include "./../../include/my.h"
 
-int octalV2(int i)
+int my_puts_octalV2(int i)
 {
     my_put_nbr_base(i, "01234567");
 }
 
-int hexaminV2(int i)
+int my_puts_hexaminV2(int i)
 {
     my_put_nbr_base(i, "0123456789abcdef");
 }
 
-int hexamajV2(int i)
+int my_puts_hexamajV2(int i)
 {
     my_put_nbr_base(i, "0123456789ABCDEF");
 }
 
-int decinosiV2(int i)
+int my_puts_decinosiV2(int i)
 {
     long int a = i;
     long int b = 4294967296;

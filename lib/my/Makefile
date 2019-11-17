@@ -9,16 +9,13 @@ NAMELIB		= libmy.a
 LIBCREATE		= ar rc $(NAMELIB) *.o
 LIBCOMPILE		= gcc -c *.c
 
-all	: libc copylib deplacerlib clean
+all	: libc copylib clean
 
 libc:
 		$(LIBCOMPILE); $(LIBCREATE)
 
-deplacerlib:
-		cp $(NAMELIB) ./../
-
 copylib:
-		cp $(NAMELIB) ./../../
+		mv $(NAMELIB) ./../../
 
 clean:
 		rm -f *.o

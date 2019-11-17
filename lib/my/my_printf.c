@@ -36,9 +36,11 @@ int check_flag(char *str, int z, va_list j, int g)
 {
     char flag[15] = "sidcbopxXs%muhl";
     int it = 0, re = 0, a = 0;
-    int (*flag_print[15])() = {string, decimal, decimal, carac, binary,
-    octal, adresse, hexamin, hexamaj, printer, percent,
-    stre, decinosi, decimal_lm, carac_lm};
+    int (*flag_print[15])() = {my_puts_string, my_puts_decimal,
+    my_puts_decimal, my_puts_carac, my_puts_binary, my_puts_octal,
+    my_puts_adresse, my_puts_hexamin, my_puts_hexamaj, my_puts_printer,
+    my_puts_percent, my_puts_stre, my_puts_decinosi, my_puts_decimal_lm,
+    my_puts_carac_lm};
 
     for (it = 0; flag[it] != '\0'; it++) {
         if (flag[it] == str[z] && it == 12)
@@ -55,9 +57,11 @@ int check_flag(char *str, int z, va_list j, int g)
 int check_flag2(int it, int z, char *str, int re)
 {
     char flag[15] = "sidcbopxXs%muhl";
-    int (*flag_print[15])() = {string, decimal, decimalV2, carac, binary,
-    octalV2, adresse, hexaminV2, hexamajV2, printer, percent,
-    stre, decinosiV2, decimal_lm, carac_lm};
+    int (*flag_print[15])() = {my_puts_string, my_puts_decimal,
+    my_puts_decimalV2, my_puts_carac, my_puts_binary, my_puts_octalV2,
+    my_puts_adresse, my_puts_hexaminV2, my_puts_hexamajV2, my_puts_printer,
+    my_puts_percent, my_puts_stre, my_puts_decinosiV2, my_puts_decimal_lm,
+    my_puts_carac_lm};
 
     for (int ti = 0; it == 13 || it == 14 || flag[ti] != '\0'; ti++) {
         if (flag[ti] == str[z+1]) {
@@ -72,7 +76,8 @@ int hcf(char *str, int z, va_list j)
 {
     char flag[3] = "oxX";
 
-    int (*flag_print[3])() = {add0chiffre, xx, printerr};
+    int (*flag_print[3])() = {my_puts_add0chiffre,
+    my_puts_xx, my_puts_printerr};
 
     for (int it = 0; flag[it] != '\0'; it++) {
         if (flag[it] == str[z])
@@ -80,4 +85,3 @@ int hcf(char *str, int z, va_list j)
     }
     return (0);
 }
-//hh, h, l, ll, q, L, j, z, Z, t, p
